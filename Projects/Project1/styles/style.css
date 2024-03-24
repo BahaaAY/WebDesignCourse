@@ -410,51 +410,57 @@ footer
     color: white;
     padding: 50px 80px;
     text-align: center;
+    justify-content: space-between;
 
     width: 100%;
-    height: 400px;
 }
 
-footer .logo-parent {
+footer .footer-social
+{
+    width: 320px;
+}
+
+footer .footer-social .logo-parent {
     display: flex;
     align-items: center;
     color: var(--primary-color);
 }
 
-footer .logo-parent img {
+footer .footer-social .logo-parent img {
     width: 32px;
     height: 32px;
     margin-right: 5px;
     
 }
 
-footer .logo-parent h1
+footer .footer-social .logo-parent h1
 {
     margin: 0;
     padding: 0;
 }
-footer p
+footer  p
 {
     text-align: left;
     font-size: 14px;
     color: var(--secondary-color);
-    margin: 20px 0px;
+    margin: 40px 0px;
 }
 
-footer ul
+footer .footer-social ul
 {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 40px;
 }
-footer ul li
+footer .footer-social ul li
 {
 
     margin-right: 20px;
 }
 
-footer ul li a
+footer .footer-social ul li a
 {
 
     display: flex;
@@ -466,9 +472,57 @@ footer ul li a
     align-items: center;
     border-radius: 50%;
     box-shadow: 5px 19px 33px -14px rgba(13,16,37,1);
+    transition: all 0.2s ease-in-out;
 }
-footer ul li a i
+footer  .footer-social ul li a i
 {
     color: var(--tertiary-color);
     font-size: 14px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+footer .footer-social ul li a:hover
+{
+    background-color: var(--tertiary-color);
+    transition: all 0.2s ease-in-out;
+}
+footer  .footer-social ul li a:hover i
+{
+    color: white;
+}
+
+
+/** Footer Nav **/ 
+footer .footer-nav
+{
+    display: flex;
+    flex-direction: row;
+}
+footer .footer-nav ul
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: start;
+    list-style: none;
+    padding: 0;
+    margin: 0 40px;
+}
+footer .footer-nav ul li
+{
+    margin-bottom: 20px;
+}
+
+footer .footer-nav ul li a
+{
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.2s ease-in-out;
+}
+footer .footer-nav ul li a:hover
+{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
 }
