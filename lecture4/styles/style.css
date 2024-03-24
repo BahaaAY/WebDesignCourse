@@ -1,0 +1,72 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+#firstDiv{
+    background-color: red;
+
+    overflow-y: scroll;
+}
+#secDiv{
+   
+    background-color: aqua;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#thirdDiv{
+    background-color: blue;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ec4646;
+    padding: 10px 20px;
+    color: #F2F2F2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 6px;
+    transition-duration: 300ms;
+
+}
+
+.btn:hover{
+    background-color: #e72d2d;
+}
+.parent
+{
+    background-color: black;
+    margin-top: 50px;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+}
+.float1
+{
+    background-color: red;
+    float: left;
+    width: calc(25% - 10px);
+    height: 100%;
+    margin-right: 10px;
+}
+.float2
+{
+    background-color: green;
+    float: left;
+    width: calc(50% - 25px);
+    height: 100%;
+    margin-right: 25px;
+}
+.float3
+{
+    background-color: blue;
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.clear-float
+{
+    clear: left;
+}

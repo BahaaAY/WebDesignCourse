@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Cairo';
+    src: url('../fonts/Cairo/Cairo-Bold.ttf');
+    font-style:normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Cairo';
+    src: url('../fonts/Cairo/Cairo-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+#mainHead{
+     text-transform: capitalize;
+    text-align: center;
+    color: darkorange;
+    font-family: Cairo ;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+body
+{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-family: Cairo;
+    font-weight: normal;
+    background: #F2F2F2F2;
+}
+
+
+.image
+{
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    border: solid 1px;
+    background-image: url("../img//support-vector-machine-algorithm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#thanks
+{
+    text-align: center;
+    font-size: 10px;
+}
+nav{
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(255, 155, 33);
+    border: 1px solid #020202 ;
+}
+.navItem{
+    display: inline;
+    margin-right: 12px;
+}
+
+.navItem a{
+    text-decoration: none;
+    color: #F2F2F2F2;
+}
+
+#reservationForm
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.reservationFormInput
+{
+    display: block;
+    width: 100%;
+}

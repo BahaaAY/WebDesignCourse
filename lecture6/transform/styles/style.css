@@ -1,0 +1,60 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: indianred;
+    margin: 10px;
+}
+
+.scale {
+    animation: scaling 1s infinite;
+}
+
+.rotate
+{
+    animation: rotationCircle 1s infinite; 
+}
+
+.translate{
+    animation: translation 1s infinite;
+}
+
+.skew{
+    animation: skewing 1s infinite;
+}
+.gradient
+{
+    animation: gradient 1s infinite;
+}
+
+@keyframes gradient
+{
+    0%{background-image: linear-gradient(to right, black 50%, blue);}
+    20%{background-image: linear-gradient(to right, black 60%, blue);}
+    40%{background-image: linear-gradient(to right, black 70%, blue);}
+    60%{background-image: linear-gradient(to right, black 80%, blue);}
+    80%{background-image: linear-gradient(to right, black 900%, blue);}
+    100%{background-image: linear-gradient(to right, black 100%, blue);}
+}
+@keyframes translation {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(100px, 0px);}
+    100% {transform: translate(0px, 0px);}
+    
+}
+
+@keyframes skewing {
+    0% {transform: skew(0deg, 0deg);}
+    50% {transform: skew(30deg, 30deg);}
+    100% {transform: skew(0deg, 0deg);}
+}
+
+@keyframes scaling {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+@keyframes rotationCircle {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+    
+}

@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.parent
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.parent div{ 
+    width: 25%;
+    height: 100px;
+    background-color: blue;
+    text-align: center;
+    line-height: 100px;
+}
+@media (max-width: 1024px){
+    .parent div{
+        width: 33.33%;
+    }
+    .parent div:nth-child(odd){
+        background-color: lightsalmon;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .parent div{
+        width: 50%;
+    }
+    .parent div:nth-child(odd){
+        background-color: yellowgreen;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .parent div{
+        width: 100%;
+    }
+
+    .parent div:nth-child(odd){
+        background-color: red;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Form
+    </title>
+</head>
+
+<body>
+    <h1 style="display: flex; justify-content: center;
+    align-items: center; ">Form</h1>
+    <div style="display: flex; justify-content: center;
+    align-items: center;">
+        <form action="#" method="post" slr>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" style="display: block; width: 100%;" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" style="display: block; width: 100%;" required>
+            <br>
+            <label for="language">Language:</label>
+            <select name="language" id="language" style="display: block; width: 100%;" required>
+                <option value="-1" selected >Choose an Option</option>
+                <option value="english" >English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="italian">Italian</option>
+            </select>
+            <br>
+
+            <br>
+            <p style="display: inline;">Gender:</p>
+            <input type="radio" id="male" name="gender" value="male" />Male
+            <input type="radio" id="female" name="gender" value="female"/>Female
+            <br> 
+            <br>
+            <input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+            <input type="checkbox" name="vehicle2" value="Car"> I have a car
+            <input type="checkbox" name="vehicle3" value="Boat"> I have a boat
+            <br>
+            <br>
+            <input type="submit" value="Submit" style="width: 100%;">
+        </form>
+    </div>
+
+</html>

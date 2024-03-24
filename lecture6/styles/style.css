@@ -1,0 +1,55 @@
+*{
+ box-sizing: border-box;
+ 
+}
+
+
+.container
+{
+    display: grid;
+    grid-template-areas: "logo logo logo nav nav nav";
+    gap: 5px;
+
+}
+.container div {
+    height: 100px;
+    background-color: green;
+    transition-duration: 300ms;
+    transition-property: background-color;
+    animation: colorchange 500ms infinite;
+}
+
+.container div:hover {
+    background-color: red;
+}
+
+.container div:nth-child(even):hover {
+    background-color: blue;
+}
+
+.container .logo
+{
+    grid-area: logo;
+    /* animate div to change color between red and blue */
+    
+
+
+
+
+
+
+
+}
+@keyframes colorchange {
+    0% {background-color: red;}
+    49% {background-color: red;}
+    50% {background-color: blue;}
+    99% {background-color: blue;}
+    100% {background-color: red;}
+}
+.container .nav
+{
+    grid-area: nav;
+    animation: colorchange 1s infinite;
+}
+
