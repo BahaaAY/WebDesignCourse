@@ -9,8 +9,15 @@
   font-family: "Rubik", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  transition: background-color 0.5s ease-in-out;
+}
+
 .parent_card {
-  height: 400px;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -47,6 +54,7 @@
 
 .lives ul li {
   display: inline-block;
+  margin-left: 5px;
 }
 
 input {
@@ -72,10 +80,17 @@ input {
   position: absolute;
   top: 12px;
   left: 12px;
-  padding: 10px;
+  width: 42px;
+  height: 42px;
   background-color: #1abc9c;
   color: white;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 500px;
+  }
 }
