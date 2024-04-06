@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0ec0267791.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Guess My Age?</title>
+  </head>
+  <body>
+    <div class="parent_card">
+      <div class="card">
+        <h1>Guess My Age?</h1>
+        <p class="message">Let's Start!</p>
+        <div class="container">
+          <input
+            type="number"
+            class="guess"
+            placeholder="Enter Your Guess..."
+          />
+          <button class="check">Check!</button>
+        </div>
+        <button class="restart">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+
+        <div class="lives">
+          <span>Lives: </span>
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/guessMyAge.js"></script>
+  </body>
+</html>
