@@ -64,22 +64,25 @@ function decrementLives() {
 }
 
 document.querySelector(".restart").addEventListener("click", function () {
-  lives = 5;
-  age = Math.floor(Math.random() * 70) + 1;
-  livesList.innerHTML = "";
-  for (let i = 0; i < lives; i++) {
-    let livesItem = document.createElement("li");
-    livesItem.innerHTML = `<i class="fa-solid fa-heart" style="color: #e74c3c;"></i>`;
-    livesList.appendChild(livesItem);
+  let response = confirm("Are You Sure?");
+  if (response) {
+    lives = 5;
+    age = Math.floor(Math.random() * 70) + 1;
+    livesList.innerHTML = "";
+    for (let i = 0; i < lives; i++) {
+      let livesItem = document.createElement("li");
+      livesItem.innerHTML = `<i class="fa-solid fa-heart" style="color: #e74c3c;"></i>`;
+      livesList.appendChild(livesItem);
+    }
+    messageHolder.textContent = "Lets Start Again!...";
+    messageHolder.style.color = "black";
+    guessInput.value = "";
+    livesItems = document.querySelectorAll(".lives ul li");
+    checkButton.disabled = false;
+    checkButton.setAttribute("style", "cursor: pointer;");
+    guessInput.disabled = false;
+    document.body.style.backgroundColor = "#f1f1f1";
   }
-  messageHolder.textContent = "Lets Start Again!...";
-  messageHolder.style.color = "black";
-  guessInput.value = "";
-  livesItems = document.querySelectorAll(".lives ul li");
-  checkButton.disabled = false;
-  checkButton.setAttribute("style", "cursor: pointer;");
-  guessInput.disabled = false;
-  document.body.style.backgroundColor = "#f1f1f1";
 });
 
 function gameOver() {
