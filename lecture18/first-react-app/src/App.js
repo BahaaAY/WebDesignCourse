@@ -6,6 +6,7 @@ const books = [
     rating: 1.9,
     info: "It continues the story of Louisa Clark after Will's death. She is trying to move on.",
     cover: "images/afteryou.jpg",
+    id: 1,
   },
   {
     bookName: "Big Magi",
@@ -13,6 +14,7 @@ const books = [
     rating: 1.2,
     info: "Readers of all ages and walks of life have drawn inspiration from Elizabeth Gilbert’s books.",
     cover: "images/bigmagic.jpg",
+    id: 2,
   },
   {
     bookName: "A Tale for the Time Being",
@@ -20,6 +22,7 @@ const books = [
     rating: 1.9,
     info: "In Tokyo, sixteen-year-old Nao has decided there’s only one escape from her aching loneliness",
     cover: "images/tale.jpg",
+    id: 3,
   },
   {
     bookName: "The Great Gatsby",
@@ -27,16 +30,17 @@ const books = [
     rating: 1.9,
     info: "The novel was inspired by a youthful romance Fitzgerald had with socialite Ginevra King",
     cover: "images/greatgatsby.jpg",
+    id: 4,
   },
 ];
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar key="8" />
       <main>
         {books.map((element) => (
-          <Book data={element} />
+          <Book data={element} key={element.id} />
         ))}
       </main>
     </div>
@@ -44,15 +48,15 @@ function App() {
 }
 function NavBar() {
   return (
-    <nav class="nav-bar">
-      <div class="nav1">
+    <nav className="nav-bar">
+      <div className="nav1">
         <a href="">Browse Categories</a>
         <input type="text" id="search_book" placeholder="Search Book" />
       </div>
       <h3>readbooks</h3>
-      <div class="icon-about">
-        <i class="material-icons">
-          <span class="material-icons-outlined">account_circle</span>
+      <div className="icon-about">
+        <i className="material-icons">
+          <span className="material-icons-outlined">account_circle</span>
         </i>
         <a href="">About-Us</a>
       </div>
@@ -60,17 +64,17 @@ function NavBar() {
   );
 }
 
-function Book(props) {
+function Book({ data }, key) {
   return (
-    <div class="books">
+    <div className="books">
       <div>
-        <img src={props.data.cover} alt="" class="book-img" />
+        <img src={data.cover} alt="" className="book-img" />
       </div>
-      <div class="descp">
-        <h2 class="book-name">{props.data.bookName}</h2>
-        <h3 class="author">{props.data.author}</h3>
-        <h3 class="rating">{props.data.rating} rating</h3>
-        <p class="info">{props.data.info}</p>
+      <div className="descp">
+        <h2 className="book-name">{data.bookName}</h2>
+        <h3 className="author">{data.author}</h3>
+        <h3 className="rating">{data.rating} rating</h3>
+        <p className="info">{data.info}</p>
         <button type="submit">See the Book</button>
       </div>
     </div>
