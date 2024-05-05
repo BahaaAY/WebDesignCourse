@@ -3,7 +3,7 @@ function Transaction({ transaction, deleteHandler }) {
     <li className={transaction.amount >= 0 ? "inc" : "exp"}>
       {transaction.desc}
       <span>{transaction.amount}</span>
-      <button class="btn-del" onClick={() => deleteHandler(transaction.id)}>
+      <button className="btn-del" onClick={() => deleteHandler(transaction.id)}>
         x
       </button>
     </li>

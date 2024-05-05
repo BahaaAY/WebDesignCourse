@@ -2,9 +2,9 @@ import Transaction from "./Transaction";
 
 function TransactionsList({ transactions, deleteHandler }) {
   return (
-    <div class="transaction">
+    <div className="transaction">
       <h3>Transaction Details</h3>
-      <ul class="trans" id="trans">
+      <ul className="trans" id="trans">
         {transactions.map((transaction) => (
           <Transaction
             key={transaction.id}

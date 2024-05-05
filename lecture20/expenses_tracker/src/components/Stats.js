@@ -17,16 +17,16 @@ function Stats({ transactions }) {
       <h2>Income Expense Tracker</h2>
       <h4>Your Balance</h4>
       <h1 id="balance">$ {total}</h1>
-      <div class="inc-exp-container">
-        <div class="inc">
+      <div className="inc-exp-container">
+        <div className="inc">
           <h4>Income</h4>
-          <p id="inc-amt" class="amt plus">
+          <p id="inc-amt" className="amt plus">
             $ {income}
           </p>
         </div>
-        <div class="exp">
+        <div className="exp">
           <h4>Expense</h4>
-          <p id="exp-amt" class="amt minus">
+          <p id="exp-amt" className="amt minus">
             $ {expense}
           </p>
         </div>

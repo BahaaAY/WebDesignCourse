@@ -1,8 +1,8 @@
 function Form({ handleSubmit }) {
   function addTransaction(e) {
     e.preventDefault();
-    const desc = document.getElementById("desc").value;
-    const amount = document.getElementById("amount").value;
+    const desc = e.target.desc.value;
+    const amount = e.target.amount.value;
     if (desc.trim() === "" || amount.trim() === "") {
       alert("Please enter Description and Amount");
     } else {
@@ -12,7 +12,6 @@ function Form({ handleSubmit }) {
         amount: Number(amount),
       };
       console.log("Transaction: ", transaction);
-
       e.target.reset();
 
       handleSubmit(transaction);
@@ -20,8 +19,8 @@ function Form({ handleSubmit }) {
   }
   return (
     <form onSubmit={addTransaction} action="#" id="form">
-      <div class="form-control">
-        <label for="desc">Description</label>
+      <div className="form-control">
+        <label htmlFor="desc">Description</label>
         <input
           type="text"
           name="desc"
@@ -30,11 +29,12 @@ function Form({ handleSubmit }) {
         />
       </div>
 
-      <div class="form-control">
-        <label for="amount">Amount</label>
+      <div className="form-control">
+        <label htmlFor="amount">Amount</label>
         <input type="number" name="amount" id="amount" placeholder="Amount" />
       </div>
-      <button class="btn" type="submit">
+
+      <button className="btn" type="submit">
         Add Transaction
       </button>
     </form>

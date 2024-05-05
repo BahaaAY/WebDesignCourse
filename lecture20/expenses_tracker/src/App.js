@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <Container>
-      <div class="ledger">
+      <div className="ledger">
         <Stats transactions={transactions} />
         <Form handleSubmit={handleSubmit} />
       </div>
